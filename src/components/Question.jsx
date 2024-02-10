@@ -2,7 +2,7 @@ const Question = () => {
   return (
     <div className="flex flex-col gap-4">
       <h2 className="font-bold text-xl mb-3">
-        Which device is required for the Internet connection ?
+        1. Which device is required for the Internet connection ?
       </h2>
       <ul className="ml-2">
         <li className="cursor-pointer border-[0.1rem] border-white mb-3 p-1 rounded-lg">

@@ -1,16 +1,26 @@
 const Question = () => {
   return (
-    <div>
-      <h2 className="">
+    <div className="flex flex-col gap-4">
+      <h2 className="font-bold text-xl mb-3">
         Which device is required for the Internet connection ?
       </h2>
-      <ul>
-        <li>Modem</li>
-        <li>Router</li>
-        <li>LAN cable</li>
-        <li>Pen Drive</li>
+      <ul className="ml-2">
+        <li className="cursor-pointer border-[0.1rem] border-white mb-3 p-1 rounded-lg">
+          Modem
+        </li>
+        <li className="cursor-pointer border-[0.1rem] border-white mb-3 p-1 rounded-lg">
+          Router
+        </li>
+        <li className="cursor-pointer border-[0.1rem] border-white mb-3 p-1 rounded-lg">
+          LAN cable
+        </li>
+        <li className="cursor-pointer border-[0.1rem] border-white mb-3 p-1 rounded-lg">
+          Pen Drive
+        </li>
       </ul>
-      <button>Next</button>
+      <button className="p-2 mx-auto bg-slate-400 w-1/4 hover:bg-green-600 rounded-lg">
+        Next
+      </button>
     </div>
   );
 };

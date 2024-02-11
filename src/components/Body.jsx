@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Question from "./Question";
 import WelcomePage from "./WelcomePage";
 
@@ -8,6 +8,17 @@ const Body = () => {
   const toggleWelcome = () => {
     setWelcome(false);
   };
+
+  useEffect(() => {
+    const welcomeStatus = window.localStorage.getItem("isWelcome");
+    if (welcomeStatus !== null) {
+      setWelcome(JSON.parse(welcomeStatus));
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("isWelcome", JSON.stringify(welcome));
+  }, [welcome]);
 
   return (
     <>

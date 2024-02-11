@@ -33,6 +33,14 @@ const Question = () => {
     }
   };
 
+  const reset = () => {
+    setIndex(0);
+    setQuestion(data[0]);
+    setScore(0);
+    setLock(false);
+    setResult(false);
+  };
+
   const handleClick = () => {
     if (lock) {
       if (index === data.length - 1) {
@@ -99,11 +107,16 @@ const Question = () => {
         </>
       )}
       {result && (
-        <div className="w-full text-center">
+        <div className="w-full flex flex-col items-center gap-60">
           <h2>
             You scored {score} out of {data.length}
           </h2>
-          <button>Reset</button>
+          <button
+            onClick={reset}
+            className="p-2 mx-auto bg-slate-400 w-1/4 hover:bg-green-600 rounded-lg"
+          >
+            Reset
+          </button>
         </div>
       )}
     </div>
